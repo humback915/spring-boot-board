@@ -1,5 +1,9 @@
 package org.springboot.board.domain;
 
+import lombok.Getter;
+import lombok.ToString;
+
+import javax.persistence.Table;
 import java.time.LocalDateTime;
 
 /**

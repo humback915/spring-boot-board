@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: board
+  datasource: # datasource
+    url: jdbc:mysql://localhost:3306/board # url:port/database
+    username: jang
+    password: board1234
+    driver-class-name: com.mysql.cj.jdbc.Driver # driver
+  jpa:
+    defer-datasource-initialization: true # spring boot 2.4 after resources data.sql init option
+    hibernate:
+      ddl-auto: create # jpa auto DDL option
+    show-sql: true # jpa sql
+    properties: # properties in jpa
+      hibernate:
+        format_sql: true # jpa hibernate sql format
+        default_batch_fetch_size: 100 # entity mapping jpa n+1 problem query solution
+  h2: # h2 option
+    console:
+      enabled: true # h2 console view option
+  sql: # data.sql option
+    init:
+      mode: always
+
+# debug log (request,response, etc log)
+debug: false
+# spring actuator option
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+# debug log option
+logging:
+  level:
+    com.springboot.board: debug
+    org.springframework.web.servlet: debug # request, response servlet log
+    org.hibernate.type.descriptor.sql.BasicBinder: trace # jpa query binding parameter log
+
+--- # --- another yaml option
+
+spring:
+  config:
+    activate:
+      on-profile: testdb #test db profile
+#  datasource
+#    url: jdbc:h2:mem:board;mode=mysql
+#    driver-class-name: org.h2.Driver
+#  sql:
+#    init:
+#      mode: always

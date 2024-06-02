@@ -22,13 +22,19 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // 1. spring boot start init
+    implementation 'org.springframework.boot:spring-boot-starter-actuator' // spring actuator
+    implementation 'org.springframework.boot:spring-boot-starter-web' // spring web
+    compileOnly 'org.projectlombok:lombok' // lombok
+    developmentOnly 'org.springframework.boot:spring-boot-devtools' // spring devtools
+    annotationProcessor 'org.projectlombok:lombok' // lombok
+    testImplementation 'org.springframework.boot:spring-boot-starter-test' // spring web
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher' //
+
+    // 2. spring boot - mysql - h2 db setting
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // spring jpa
+    runtimeOnly 'com.h2database:h2' // h2
+    runtimeOnly 'mysql:mysql-connector-java' // mysql-driver
 }
 
 tasks.named('test') {
