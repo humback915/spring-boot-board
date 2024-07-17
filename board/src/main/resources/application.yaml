@@ -27,7 +27,7 @@ spring:
       mode: always
 
 # debug log (request,response, etc log)
-debug: false
+debug: false # test
 # spring actuator option
 management:
   endpoints:
