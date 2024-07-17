@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판 page</title>
+</head>
+<body>
+    <header>
+        헤더
+        <hr>
+    </header>
+
+    <main>
+        <form>
+            <label for="search-type" hidden>유형</label>
+            <select id="search-type" name="search-type">
+                <option>제목</option>
+                <option>본문</option>
+                <option>아이디</option>
+                <option>닉네임</option>
+                <option>해시태그</option>
+            </select>
+
+            <label for="search-value" hidden>검색어</label>
+            <input type="search" placeholder="검색어" id="search-value" name="search-value">
+
+            <button type="submit">검색</button>
+        </form>
+
+        테이블
+
+        내비게이션 바
+    </main>
+
+    <footer>
+        <hr>
+        푸터
+    </footer>
+</body>
+</html>

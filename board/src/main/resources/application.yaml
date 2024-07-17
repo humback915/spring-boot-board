@@ -2,9 +2,9 @@ spring:
   application:
     name: board
   datasource: # datasource
-    url: jdbc:mysql://localhost:3306/board # url:port/database
-    username: jang
-    password: board1234
+    url: jdbc:mysql://175.208.203.166:3306/mysqldb # url:port/database
+    username: humbackdb
+    password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver # driver
   jpa:
     defer-datasource-initialization: true # spring boot 2.4 after resources data.sql init option
