@@ -25,6 +25,8 @@ spring:
   sql: # data.sql option
     init:
       mode: always
+  thymeleaf3:
+    decoupled-logic: true # thymeleaf 태그와 html마크업 분리 설정 활성화
 
 # debug log (request,response, etc log)
 debug: false # test

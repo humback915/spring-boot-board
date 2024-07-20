@@ -51,6 +51,14 @@ dependencies {
 
     // 5. view - thymeleaf
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    // 6. 커스텀 프로퍼티 아이디 지원 ex) config 설정 후 yaml 파일에서 설정시 자동완성 decoupled thymeleaf logic
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+    // 7. spring security+thymeleaf security5
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+    testImplementation 'org.springframework.security:spring-security-test'
+
 }
 
 tasks.named('test') {
